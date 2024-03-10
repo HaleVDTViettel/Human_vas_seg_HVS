@@ -3,7 +3,7 @@
 GPU_ID=$1
 
 docker run --rm -it --gpus '"device='$GPU_ID'"' --ipc=host \
-    -v $CODE_DIR:/workspace \
+    -v $CODE_DIR:/models \
     -v $DATA_DIR:/data \
     -v /home/$USER/.cache/torch:/root/.cache/torch \
     -v /home/$USER/.cache/huggingface:/root/.cache/huggingface \
